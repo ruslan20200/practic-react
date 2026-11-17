@@ -1,4 +1,4 @@
-import { profile, sections } from '../data/content.js'
+import { copy, profile, sections } from '../data/content.js'
 
 export function Main() {
   return (
@@ -10,16 +10,19 @@ export function Main() {
             {profile.role}
           </p>
           <h1 id="hero-title">
-            Building my
+            {copy.heroTitle[0]}
             <br />
-            <span>way forward.</span>
+            <span>{copy.heroTitle[1]}</span>
           </h1>
           <p className="hero-description">{profile.introduction}</p>
           <a className="text-link" href="#projects">
-            Explore my work <span aria-hidden="true">↓</span>
+            {copy.heroAction} <span aria-hidden="true">↓</span>
           </a>
         </div>
-        <div className="hero-aside" aria-label={`Based in ${profile.location}`}>
+        <div
+          className="hero-aside"
+          aria-label={`${copy.locationLabel} ${profile.location}`}
+        >
           <div className="orbit orbit-one" />
           <div className="orbit orbit-two" />
           <div className="orbit orbit-three" />
@@ -81,7 +84,7 @@ export function Main() {
           <div>
             <h2>{sections.projects.title}</h2>
             <p className="section-description">{sections.projects.description}</p>
-            <ul className="project-tags" aria-label="Technologies">
+            <ul className="project-tags" aria-label={copy.projectTechnologiesLabel}>
               {sections.projects.tags.map((tag) => (
                 <li key={tag}>{tag}</li>
               ))}
@@ -94,9 +97,9 @@ export function Main() {
       </section>
 
       <section className="contact-banner section-shell">
-        <p className="eyebrow">Have a question or an idea?</p>
+        <p className="eyebrow">{copy.contactPrompt}</p>
         <a href={`mailto:${profile.email}`}>
-          Let&apos;s talk <span aria-hidden="true">↗</span>
+          {copy.contactAction} <span aria-hidden="true">↗</span>
         </a>
       </section>
     </main>

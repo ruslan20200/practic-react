@@ -7,6 +7,18 @@ export const profile = {
   location: 'Almaty, Kazakhstan',
 }
 
+export const copy = {
+  homeLinkLabel: 'Return to home',
+  navigationLabel: 'Main navigation',
+  contactLink: 'Get in touch',
+  heroTitle: ['Building my', 'way forward.'],
+  heroAction: 'Explore my work',
+  locationLabel: 'Based in',
+  projectTechnologiesLabel: 'Technologies',
+  contactPrompt: 'Have a question or an idea?',
+  contactAction: "Let's talk",
+}
+
 export const navigation = [
   { label: 'About', href: '#about' },
   { label: 'Education', href: '#education' },
