@@ -1,17 +1,24 @@
-# React + Vite
+# Ruslan's portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive personal portfolio built with React and Vite.
 
-Currently, two official plugins are available:
+## Project structure
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- `src/App.jsx` composes the page from `Header`, `Main`, and `Footer`.
+- `src/components/` contains the separate page components.
+- `src/data/content.js` holds the text, navigation, skills, and project details.
+- `src/App.css` and `src/index.css` contain the page and global styles.
 
-## React Compiler
+To update the displayed text, edit `src/data/content.js`.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Run locally
 
-## Expanding the ESLint configuration
+```sh
+npm ci
+npm run dev
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# practic-react
+## Publish
+
+Pushing to `main` runs `.github/workflows/deploy.yml`, builds the site, and deploys
+it to GitHub Pages at <https://ruslan20200.github.io/practic-react/>.
